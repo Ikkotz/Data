@@ -23,6 +23,3 @@ league_leaders = LeagueLeaders(
 df_league_leaders = league_leaders.get_data_frames()[0]
 df_league_leaders.to_csv("Lideres de la liga.csv", index=False, encoding="utf-8-sig")
 print("✅ Data importada a Lideres de la liga.csv")
-
-#Hipotesis_
-##Lideres de cada categoria es un base para asistencias? Un pivot para rebotes?
