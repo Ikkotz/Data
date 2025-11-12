@@ -18,7 +18,7 @@ data/               # Se guarda toda la data descargada (CSV)
 Lideres_historicos_ordenado.csv
 Lideres_de_la_liga.csv
 
-📁 images/             # Contiene los gráficos generados (PNG)
+images/             # Contiene los gráficos generados (PNG)
 top10_fg_pct.png
 top10_ast.png
 lebron_ranking_historico_NBA.png
