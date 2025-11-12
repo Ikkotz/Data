@@ -10,8 +10,7 @@ def calculate_correlation(array1, array2):
 
 def save_and_show(filename: str, folder: str = "images"):
     """
-    Saves the current matplotlib figure to the given folder (default: ./images/),
-    then shows and closes the plot.
+    Usado para guardar las imagenes y enseñarlas por pantalla
     """
     base_dir = os.path.dirname(__file__)
     output_dir = os.path.join(base_dir, folder)
@@ -21,4 +20,4 @@ def save_and_show(filename: str, folder: str = "images"):
     plt.savefig(filepath, dpi=300, bbox_inches="tight")
     plt.show()
     plt.close()
-    print(f"✅ Saved figure to: {os.path.abspath(filepath)}")
+    print(f"✅ Imagen guardada en: {os.path.abspath(filepath)}")
