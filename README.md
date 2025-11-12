@@ -10,22 +10,21 @@ El script genera **dataframes** y **gráficos automatizados** que analizan el re
 
 ```
 
-📁 NBA_Stats_Analyzer/
-│
-├── main.py                # Script principal — descarga, procesa y genera gráficos
-├── utils.py               # Funciones auxiliares (guardar gráficos, correlaciones, etc.)
-│
-├── 📁 data/               # Se guarda toda la data descargada (CSV)
-│   ├── Lideres_historicos_ordenado.csv
-│   └── Lideres_de_la_liga.csv
-│
-├── 📁 images/             # Contiene los gráficos generados (PNG)
-│   ├── top10_fg_pct.png
-│   ├── top10_ast.png
-│   ├── lebron_ranking_historico_NBA.png
-│   └── ...
-│
-└── README.md              # Este archivo
+NBA_Stats_Analyzer/
+main.py                # Script principal — descarga, procesa y genera gráficos
+utils.py               # Funciones auxiliares (guardar gráficos, correlaciones, etc.)
+
+data/               # Se guarda toda la data descargada (CSV)
+Lideres_historicos_ordenado.csv
+Lideres_de_la_liga.csv
+
+📁 images/             # Contiene los gráficos generados (PNG)
+top10_fg_pct.png
+top10_ast.png
+lebron_ranking_historico_NBA.png
+...
+
+README.md              # Este archivo
 
 ````
 
@@ -34,7 +33,7 @@ El script genera **dataframes** y **gráficos automatizados** que analizan el re
 ## 📊 Gráficos Generados
 
 | #  | Gráfico                            | Descripción                                                                        |
-| -- | ---------------------------------- | ---------------------------------------------------------------------------------- |
+
 | 1  | `top10_fg_pct.png`                 | Jugadores con mejor porcentaje de campo (FG%)                                      |
 | 2  | `top10_fg3_pct.png`                | Jugadores con mejor porcentaje de triples (FG3%)                                   |
 | 3  | `top10_ast.png`                    | Top 10 en asistencias totales (LeBron y Jokic destacados)                          |
