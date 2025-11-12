@@ -1,7 +1,3 @@
-Perfecto 🏀 — aquí tienes el archivo **`README.md`** completo y listo para guardar en tu repositorio.
-
----
-
 ```markdown
 # 🏀 NBA Stats Analyzer — LeBron James & League Insights
 
