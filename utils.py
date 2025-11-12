@@ -1,23 +1,24 @@
-import pandas as pd
+# utils.py
+import os
+import matplotlib.pyplot as plt
+from scipy import stats
 
-from nba_api.stats.endpoints import playercareerstats
-# Nikola Jokić's career stats
-career = playercareerstats.PlayerCareerStats(player_id='203999')
-print(career)
-# Get data as a pandas DataFrame
-career_df = career.get_data_frames()[0]
-# Get data as JSON
-career_json = career.get_json()
-# Get data as a dictionary
-career_dict = career.get_dict()
+def calculate_correlation(array1, array2):
+    correlation, p_value = stats.pearsonr(array1, array2)
+    r_squared = correlation**2
+    return correlation, r_squared, p_value
 
-from nba_api.live.nba.endpoints import scoreboard
-# Today's Score Board
-games = scoreboard.ScoreBoard()
-print(games)
-# Get data as JSON
-games_json = games.get_json()
-print(games_json)
-# Get data as a dictionary
-games_dict = games.get_dict()
-print(games_dict)
+def save_and_show(filename: str, folder: str = "images"):
+    """
+    Saves the current matplotlib figure to the given folder (default: ./images/),
+    then shows and closes the plot.
+    """
+    base_dir = os.path.dirname(__file__)
+    output_dir = os.path.join(base_dir, folder)
+    os.makedirs(output_dir, exist_ok=True)
+
+    filepath = os.path.join(output_dir, filename)
+    plt.savefig(filepath, dpi=300, bbox_inches="tight")
+    plt.show()
+    plt.close()
+    print(f"✅ Saved figure to: {os.path.abspath(filepath)}")
